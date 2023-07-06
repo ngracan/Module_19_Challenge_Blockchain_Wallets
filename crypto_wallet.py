@@ -10,8 +10,7 @@
 import os
 import requests
 from dotenv import load_dotenv
-
-load_dotenv()
+load_dotenv("SAMPLE.env")
 from bip44 import Wallet
 from web3 import Account
 from web3 import middleware
@@ -69,7 +68,7 @@ def send_transaction(w3, account, to, wage):
         "from": account.address,
         "value": value,
         "gas": gasEstimate,
-        "gasPrice": 0,
+        "gasPrice": 1000000000,
         "nonce": w3.eth.getTransactionCount(account.address),
     }
 
@@ -78,3 +77,5 @@ def send_transaction(w3, account, to, wage):
 
     # Send the signed transactions
     return w3.eth.sendRawTransaction(signed_tx.rawTransaction)
+    
+    
