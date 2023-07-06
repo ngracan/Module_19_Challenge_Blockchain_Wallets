@@ -2,8 +2,10 @@
 
 ## Validation of transaction:
 
-![](Validated_transaction_hash.png)
+![](Images/Validated_transaction_hash.png)
 
 ## Account balance after transaction:
 
-![]()
+![](Images/Account_balance.png)
+
+
